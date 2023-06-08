@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостиницы Седоны</title>
   </head>
 
   <body>
     <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
-        <img src="images/logo.svg" width="140" height="70" alt="Логотип Седона.">
+        <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
       </a>
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
@@ -26,26 +24,22 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__users-menu users-menu">
-        <ul class="users-menu__list">
-          <li class="users-menu__item">
-            <a class="users-menu__link" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="users-menu__item">
-            <a class="users-menu__favourites-link favourites-link" href="#">
-              <span class="favourites-link__text">12</span>
-              <span class="visually-hidden">12 гостиниц в избранном</span>
-            </a>
-          </li>
-          <li class="users-menu__item">
-            <a class="users-menu__link" href="#">
-              <span class="user-menu__text">Хочу сюда!</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="page-header__users-menu users-menu">
+        <li class="users-menu__item">
+          <a class="users-menu__link" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="users-menu__item">
+          <a class="users-menu__favourites-link favourites-link" href="#">
+            <span class="favourites-link__text">12</span>
+            <span class="visually-hidden">гостиниц в избранном</span>
+          </a>
+        </li>
+        <li class="users-menu__item">
+          <a class="users-menu__link" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
     </header>
     <main class="main-inner">
       <div class="main-inner__filters-hotels filters-hotels">
@@ -109,11 +103,11 @@
               <legend class="filters__title">Стоимость, ₽:</legend>
               <ul class="filters__list">
                 <li class="filters__item">
-                  <label class="filters__label">от
-                    <input class="filters__input" type="number" name="min-price" value="0">
+                  <label class="filters__label" for="min-price">от
+                    <input class="filters__input" type="number" name="min-price" value="0" id="min-price">
                   </label>
-                  <label class="filters__label">до
-                    <input class="filters__input" type="number" name="max-price" value="9000">
+                  <label class="filters__label" for="max-price">до
+                    <input class="filters__input" type="number" name="max-price" value="9000" id="max-price">
                   </label>
                 </li>
               </ul>
@@ -125,28 +119,26 @@
       </div>
       <section class="main-inner__catalog-hotels catalog-hotels">
         <h2 class="catalog-hotels__title">Найдено гостиниц: 38</h2>
-        <form class="catalog-hotels__sorting sorting" action="https://echo.htmlacademy.ru/" method="post">
-          <select class="sorting__select" aria-label="Сортировка" name="sorting">
-            <option class="sorting__option" value="cheap"> Сначала дешевые</option>
-            <option class="sorting__option" value="expensivet"> Сначала дорогие</option>
-            <option class="sorting__option" value="rating"> По рейтингу</option>
-          </select>
-        </form>
+        <select class="sorting__select" aria-label="Сортировка" name="sorting">
+          <option class="sorting__option" value="cheap"> Сначала дешевые</option>
+          <option class="sorting__option" value="expensivet"> Сначала дорогие</option>
+          <option class="sorting__option" value="rating"> По рейтингу</option>
+        </select>
         <ul class="catalog-hotels__view view">
           <li class="view__item">
-            <button class="view__grid" type="button">
+            <a class="view__grid" href="#">
               <span class="visually-hidden">Показать сеткой </span>
-            </button>
+            </a>
           </li>
           <li class="view__item">
-            <button class="view__one" type="button">
+            <a class="view__one" href="#">
               <span class="visually-hidden">Показать по одному </span>
-            </button>
+            </a>
           </li>
           <li class="view__item">
-            <button class="view__list" type="button">
+            <a class="view__list" href="#">
               <span class="visually-hidden">Показать списком </span>
-            </button>
+            </a>
           </li>
         </ul>
         <ul class="catalog-hotels__list-hotels list-hotels">
@@ -162,7 +154,7 @@
             <p class="list-hotels__cost">От 4000 ₽</p>
             <a class="list-hotels__detailed" href="#">подробнее</a>
             <button class="list-hotels__favourites" type="button">в избранное</button>
-            <p class="list-hotels__stars stars stars--stars-four">
+            <p class="list-hotels__stars stars stars--4">
               <span class="visually-hidden"> 4 Звезды</span>
             </p>
             <span class="list-hotels__rating">Рейтинг: 8,5</span>
@@ -179,7 +171,7 @@
             <p class="list-hotels__cost">От 5000 ₽</p>
             <a class="list-hotels__detailed" href="#">подробнее</a>
             <button class="list-hotels__favourites list-hotels__favourites--contrast" type="button">в избранном</button>
-            <p class="list-hotels__stars stars stars--stars-four ">
+            <p class="list-hotels__stars stars stars--4 ">
               <span class="visually-hidden"> 4 Звезды</span>
             </p>
             <span class="list-hotels__rating">Рейтинг: 9,2</span>
@@ -196,7 +188,7 @@
             <p class="list-hotels__cost">От 2500 ₽</p>
             <a class="list-hotels__detailed" href="#">подробнее</a>
             <button class="list-hotels__favourites" type="button">в избранное</button>
-            <p class="list-hotels__stars stars stars--stars-three">
+            <p class="list-hotels__stars stars stars--3">
               <span class="visually-hidden"> 3 Звезды</span>
             </p>
             <span class="list-hotels__rating">Рейтинг: 6,9</span>
@@ -213,7 +205,7 @@
             <p class="list-hotels__cost">От 1500 ₽</p>
             <a class="list-hotels__detailed" href="#">подробнее</a>
             <button class="list-hotels__favourites" type="button">в избранное</button>
-            <p class="list-hotels__stars stars stars--stars-two">
+            <p class="list-hotels__stars stars stars--2">
               <span class=" visually-hidden"> 2 Звезды</span>
             </p>
             <span class="list-hotels__rating">Рейтинг: 5</span>
@@ -221,7 +213,7 @@
         </ul>
         <ul class="catalog-hotels__pagination pagination">
           <li class="pagination__list">
-            <a class="pagination__link" href="#">1</a>
+            <a class="pagination__link" href="#" aria-current=" page ">1</a>
           </li>
           <li class="pagination__list">
             <a class="pagination__link" href="#">2</a>
@@ -243,13 +235,13 @@
       <section class="main-inner__subscribe subscribe subscribe--background">
         <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
         <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe__label" for="subscribe">
+            <span class="visually-hidden"> Ваш e-mail:</span>
             <input class="subscribe__input" id="subscribe" name="subscribe" type="text" placeholder="Ваш e-mail"
               required>
           </label>
           <button class="subscribe__button" type="submit">Подписаться</button>
-          <span class="visually-hidden">Подписаться</span>
         </form>
       </section>
     </main>
