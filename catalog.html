@@ -4,10 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Гостиницы Седоны</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo logo" href="index.html">
         <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
       </a>
@@ -24,16 +25,16 @@
           </li>
         </ul>
       </nav>
-      <ul class="page-header__users-menu users-menu">
+      <ul class="page-header__users-menu users-menu ">
         <li class="users-menu__item">
-          <a class="users-menu__link" href="#">
+          <a class="users-menu__link-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="users-menu__item">
           <a class="users-menu__favourites-link favourites-link" href="#">
             <span class="favourites-link__text">12</span>
-            <span class="visually-hidden">гостиниц в избранном</span>
+            <span class="visually-hidden">в избранном</span>
           </a>
         </li>
         <li class="users-menu__item">
@@ -41,7 +42,7 @@
         </li>
       </ul>
     </header>
-    <main class="main-inner">
+    <main class="main-inner main-container container ">
       <div class="main-inner__filters-hotels filters-hotels">
         <h1 class="filters-hotels__title">Гостиницы Седоны</h1>
         <ol class="filters-hotels__breadcrumbs breadcrumbs">
@@ -157,7 +158,7 @@
             <p class="list-hotels__stars stars stars--4">
               <span class="visually-hidden"> 4 Звезды</span>
             </p>
-            <span class="list-hotels__rating">Рейтинг: 8,5</span>
+            <p class="list-hotels__rating">Рейтинг: 8,5</p>
           </li>
           <li class="list-hotels__item">
             <a class="list-hotels__link" href="#">
@@ -174,7 +175,7 @@
             <p class="list-hotels__stars stars stars--4 ">
               <span class="visually-hidden"> 4 Звезды</span>
             </p>
-            <span class="list-hotels__rating">Рейтинг: 9,2</span>
+            <p class="list-hotels__rating">Рейтинг: 9,2</p>
           </li>
           <li class="list-hotels__item">
             <a class="list-hotels__link" href="#">
@@ -191,7 +192,7 @@
             <p class="list-hotels__stars stars stars--3">
               <span class="visually-hidden"> 3 Звезды</span>
             </p>
-            <span class="list-hotels__rating">Рейтинг: 6,9</span>
+            <p class="list-hotels__rating">Рейтинг: 6,9</p>
           </li>
           <li class="list-hotels__item">
             <a class="list-hotels__link" href="#">
@@ -208,12 +209,12 @@
             <p class="list-hotels__stars stars stars--2">
               <span class=" visually-hidden"> 2 Звезды</span>
             </p>
-            <span class="list-hotels__rating">Рейтинг: 5</span>
+            <p class="list-hotels__rating">Рейтинг: 5</p>
           </li>
         </ul>
         <ul class="catalog-hotels__pagination pagination">
           <li class="pagination__list">
-            <a class="pagination__link" href="#" aria-current=" page ">1</a>
+            <a class="pagination__link pagination__link--dot" href="#" aria-current=" page ">1</a>
           </li>
           <li class="pagination__list">
             <a class="pagination__link" href="#">2</a>
@@ -232,9 +233,10 @@
           </li>
         </ul>
       </section>
-      <section class="main-inner__subscribe subscribe subscribe--background">
-        <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-        <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="main-inner__subscribe subscribe subscribe--catalog">
+        <h2 class="subscribe__title subscribe__title--catalog">Подпишитесь на рассылку</h2>
+        <p class="subscribe__text subscribe__text--catalog">Только полезная информация и никакого спама, честное
+          бойскаутское!</p>
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe__label" for="subscribe">
             <span class="visually-hidden"> Ваш e-mail:</span>
@@ -246,7 +248,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container ">
       <section class="page-footer__socials socials">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="socials__list">

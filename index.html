@@ -4,10 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Седона-город в Аризоне</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo logo" href="index.html" aria-current="page">
         <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
       </a>
@@ -26,14 +27,14 @@
       </nav>
       <ul class="page-header__users-menu users-menu ">
         <li class="users-menu__item">
-          <a class="users-menu__link" href="#">
+          <a class="users-menu__link-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="users-menu__item">
           <a class="users-menu__favourites-link favourites-link" href="#">
             <span class="favourites-link__text">12</span>
-            <span class="visually-hidden">гостиниц в избранном</span>
+            <span class="visually-hidden">в избранном</span>
           </a>
         </li>
         <li class="users-menu__item">
@@ -41,7 +42,7 @@
         </li>
       </ul>
     </header>
-    <main class="main-page">
+    <main class="main-page main-container container ">
       <section class="main-page__hero hero">
         <h1 class="visually-hidden"> Добро пожаловать в прекрасную Седону</h1>
         <img class="hero__img" src="images/hero.svg" width="458" height="352" alt="Седона круче, чем Гранд-Каньон.">
@@ -50,27 +51,29 @@
         <h2 class="advantages__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--color">
-            <h3 class="advantages__sub-title">Настоящий городок</h3>
-            <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <li class="advantages__item advantages__item--city">
+            <h3 class="advantages__sub-title advantages__sub-title--color">Настоящий городок</h3>
+            <p class="advantages__description advantages__description--color">Седона — не аттракцион для туристов, там
+              течёт своя жизнь</p>
             <img class="advantages__photo" src="images/advantages-photo-1.jpg" width="800" height="385"
               alt="Городок Седона.">
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--area">
             <h3 class="advantages__sub-title">Небольшая площадь</h3>
             <p class="advantages__description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--road">
             <h3 class="advantages__sub-title">Красивая дорога</h3>
             <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--tourists">
             <h3 class="advantages__sub-title">Мало туристов</h3>
             <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li class="advantages__item advantages__item--color">
-            <h3 class="advantages__sub-title">Там есть мост дьявола</h3>
-            <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          <li class="advantages__item advantages__item--bridge">
+            <h3 class="advantages__sub-title advantages__sub-title--color">Там есть мост дьявола</h3>
+            <p class="advantages__description advantages__description--color">Да, по нему можно пройти! Если вы
+              осмелитесь, разумеется</p>
             <img class="advantages__photo" src="images/advantages-photo-2.jpg" width="800" height="385"
               alt="Природный горный мост над коньоном.">
           </li>
@@ -81,15 +84,15 @@
         <p class="service__text">Опытный персонал и качественное обслуживание!</p>
         <ul class="service__list">
           <li class="service__item">
-            <h3 class="service__sub-title">Жильё</h3>
+            <h3 class="service__sub-title service__sub-title--house">Жильё</h3>
             <p class="service__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="service__item">
-            <h3 class="service__sub-title">Еда</h3>
+            <h3 class="service__sub-title service__sub-title--food">Еда</h3>
             <p class="service__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="service__item">
-            <h3 class="service__sub-title">Сувениры</h3>
+            <h3 class="service__sub-title service__sub-title--souvenir">Сувениры</h3>
             <p class="service__description">Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
@@ -113,7 +116,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container ">
       <section class="page-footer__socials socials">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="socials__list">
