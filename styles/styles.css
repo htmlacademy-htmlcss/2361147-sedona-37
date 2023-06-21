@@ -18,19 +18,25 @@
 html {
   height: 100%;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body{
+
+  height: 100%;
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #F2F2F2;
   margin: 0;
+}
+.container{
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
-}
-.container {
   width: 1200px;
   margin: 0 auto;
   background-color: #FFFFFF;
@@ -49,16 +55,22 @@ body{
 /* header */
 .page-header{
   display: flex;
-  justify-content: space-between;
-  margin-right: 70px;
-  margin-left: 70px;
+  align-items: center;
+  padding-right: 70px;
+  padding-left: 70px;
 
 
 }
 .navigation__list{
   list-style: none;
   display: flex;
-  margin-right: 70px;
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: 30px;
+
+
 }
 .navigation__link{
   font-size: 20px;
@@ -66,11 +78,15 @@ body{
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+  padding: 20px 16px;
+  width: 100px;
 }
 .users-menu{
   list-style: none;
   display: flex;
-  margin-right: 70px;
+  max-width: 310px;
+  margin-left: auto;
+
 }
 .favourites-link{
   font-weight: 400;
@@ -80,7 +96,8 @@ body{
   background-color: #7DB54F;
   border-radius: 50%;
   text-decoration: none;
-  padding: 5px 5px 5px 4px;
+  padding: 5px;
+  margin-right: 20px;
 }
 .users-menu__link{
   font-weight: 700;
@@ -91,29 +108,46 @@ body{
   color:#FFFFFF ;
   background: #756157;
   border-radius: 4px;
-text-align: center;
+  text-align: center;
   padding: 8px 34px;
 }
 /* main */
-/* не уверенна что нужен этот класс, возможно логичнее все main( на главной и каталоге) объеденить в один класс */
 .main-page{
   text-align: center;
+
 }
 .main-container {
+  margin: 0 auto;
   flex-grow: 1;
 }
 /* section:hero */
 .hero{
+  text-align: center;
   background-image: url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-color:#4595ca;
   background-size: cover;
   padding: 51px 0 82px 0;
+
   /* на всех фоновых картинках Николай обьяснял, что нужно ставить backgroun-color, чтоб при отключении ccs был видет текст. Но при этом фон выходит за приделы картинки, думаю дальше это можно исправить))
   background-color: #82B3D3;
   margin-bottom: 0; */
 }
 /* section-advantages */
+.advantages__list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+.advantages__item{
+width: 400px;
+min-height: 385px;
+padding: 112.5px 85px;
+}
 .advantages__title{
   font-weight: 700;
   font-size: 30px;
@@ -126,12 +160,16 @@ text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
-.advantages__list{
-  list-style: none;
+.advantages__photo{
+  vertical-align: middle;
+
 }
 .advantages__item--city{
   color: #FFFFFF;
   background-color: #82B3D3;
+  padding: 102px 85px;
+
+
 }
 .advantages__item--area{
   background-color:rgba(131, 179, 211, 0.12);
@@ -145,6 +183,8 @@ text-align: center;
 .advantages__item--bridge{
   color: #FFFFFF;
   background-color: #82B3D3;
+  padding: 102px 85px;
+
 }
 .advantages__sub-title{
   font-weight: 700;
@@ -161,6 +201,9 @@ text-align: center;
   color: #FFFFFF;
 }
 /* section-service */
+.service{
+  width: 1200px;
+}
 .service__title{
   font-weight: 700;
   font-size: 30px;
@@ -174,10 +217,22 @@ text-align: center;
   color: #333333;
 }
 .service__list{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   list-style: none;
+
+
 }
 .service__item{
+  width: 400px;
   padding: 81px 85px 81px 85px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.service__item--food{
+  background-color: inherit;
 }
 .service__sub-title{
   font-weight: 700;
@@ -185,33 +240,39 @@ text-align: center;
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
+
 }
 .service__sub-title--house::before{
   content: "";
   display: block;
+  margin: 0 auto;
   width: 75px;
   height: 72px;
   background-image: url("../images/service-house.svg");
   background-repeat: no-repeat;
-  background-position: center;
+
+
 }
 .service__sub-title--food::before{
   content: "";
   display: block;
+  margin: 0 auto;
   width: 75px;
   height: 72px;
   background-image: url("../images/service-food.svg");
   background-repeat: no-repeat;
-  background-position: center;
+
+
 }
 .service__sub-title--souvenir::before{
   content: "";
   display: block;
+  margin: 0 auto;
   width: 75px;
   height: 72px;
   background-image: url("../images/service-souvenir.svg");
   background-repeat: no-repeat;
-  background-position: center;
+
 }
 /* section-booking-hotel */
 .booking-hotel{
@@ -269,6 +330,9 @@ color: #FFFFFF;
   border: 0;
 }
 .subscribe__button{
+  display: inline-block;
+  flex-wrap: wrap;
+  min-width:132px ;
   font-family: inherit;
   font-style: 700;
   font-size: 20px;
@@ -278,14 +342,38 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #82B3D3;
   border: 0;
+
 }
  /* footer  */
+.page-footer__container{
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 40px auto 30px;
+  align-items: center;
+}
+.socials{
+  width: 142px;
+
+}
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 720px;
+}
 .contacts__phone{
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  padding: 5px 194px 5px 195px;
+
+
+}
+.copyright{
+  width: 115px;
 }
 /* Catalog section-filters-hotels */
 .filters-hotels{
@@ -293,12 +381,24 @@ color: #FFFFFF;
   background-repeat: no-repeat;
   background-color: #82B3D3;
   background-size: cover;
+  padding: 35px 70px 70px 70px;
+  margin: 0;
 }
 .filters-hotels__title{
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+
+}
+.breadcrumbs{
+  list-style: none;
+  display: flex;
+  margin: 0 0 40px 0;
+  padding: 0;
 }
 .breadcrumbs__link{
   font-size: 16px;
@@ -306,22 +406,45 @@ color: #FFFFFF;
   color: #FFFFFF;
 }
 /* section-filters-hotels */
+
+.filters{
+  display: flex;
+  width: 1060px;
+
+}
+.filters__group{
+  width: 150.43px;
+  padding: 0;
+  margin: 0;
+  margin-right: 70px;
+  border: 0;
+}
+.filters__group--cost{
+  width: 288px;
+  margin-left: 97px;
+  margin-right: 70px;
+}
 .filters__title{
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
+  padding: 0;
 }
 .filters__list{
   list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
 }
 .filters__item{
   line-height: 23px;
   color: #FFFFFF;
+  margin: 16px 0 0 0;
 }
 .filters__label{
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+
 }
 .filters__input{
   font-family: inherit;
@@ -329,8 +452,17 @@ color: #FFFFFF;
   font-size: 18px;
   line-height: 24px;
   color:  #000000;
+
 }
+.filters__input--cost{
+  width: 143px;
+  border: 0;
+
+}
+/*  Не могу понятьь как поставить кнопки друг над другом*/
 .filters__button{
+  display: block;
+  align-self: flex-end;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -338,20 +470,30 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 8px 50px;
+  padding: 8px 8px;
   border: 0;
   text-align: center;
   text-transform: uppercase;
+  max-width: 200px;
 }
 .filters__button--reset{
   background-color: transparent;
 }
 /* section-catalog-hotels */
+.catalog-hotels{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 70px 60px 70px;
+
+
+}
 .catalog-hotels__title{
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+margin: 0;
 }
 .sorting__select{
   font-family: inherit;
@@ -359,14 +501,41 @@ color: #FFFFFF;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  padding: 14px 20px;
+  padding-right: 131px;
+  padding-left: 20px;
+
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  height: 49px;
+}
+.view{
+  margin: 0;
 }
 .list-hotels{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  padding: 0;
+  width: 1060px;
   list-style: none;
 }
+.list-hotels__item{
+  box-sizing: 340px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+.list-hotels__favourites--contrast{
+  box-sizing: 320px;
+}
+.list-hotels__img{
+  vertical-align: middle;
+}
 .list-hotels__link{
+  display: block;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -383,7 +552,7 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #756157;
   border-radius: 4px;
-  padding: 8px 26px;
+  padding: 8px 21px;
   border: 0;
 }
 .list-hotels__favourites{
@@ -406,9 +575,12 @@ color: #FFFFFF;
 }
 .list-hotels__favourites--contrast{
   background: #7DB54F;
+  padding: 8px 13px;
 }
 /* ul-pagination  */
 .pagination{
+  display: flex;
+  justify-content:s ;
   list-style: none;
 }
 .pagination__link{

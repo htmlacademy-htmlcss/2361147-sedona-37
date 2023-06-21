@@ -94,14 +94,16 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filters__group">
+              <fieldset class="filters__group filters__group--cost">
                 <legend class="filters__title">Стоимость, ₽:</legend>
                 <ul class="filters__list">
                   <li class="filters__item">
                     <label class="filters__label" for="min-price">от</label>
-                    <input class="filters__input" type="number" name="min-price" value="0" id="min-price">
+                    <input class="filters__input filters__input--cost" type="number" name="min-price" value="0"
+                      id="min-price">
                     <label class="filters__label" for="max-price">до</label>
-                    <input class="filters__input" type="number" name="max-price" value="9000" id="max-price">
+                    <input class="filters__input filters__input--cost" type="number" name="max-price" value="9000"
+                      id="max-price">
                   </li>
                 </ul>
               </fieldset>
@@ -152,9 +154,9 @@
               </p>
               <p class="list-hotels__rating">Рейтинг: 8,5</p>
             </li>
-            <li class="list-hotels__item">
+            <li class="list-hotels__item list-hotels__item--contrast">
               <a class="list-hotels__link" href="#">
-                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="300" height="212"
+                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="280" height="200"
                   alt="Горы Седоны на фоне темных облаков с радугой">
               </a>
               <a class="list-hotels__link" href="#">
@@ -240,36 +242,39 @@
       </main>
 
       <footer class="page-footer">
-        <section class="page-footer__socials socials">
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Vkontakte</span>
-              </a>
-            </li>
-            <li class=" socials__item">
-              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Telegram</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Youtube</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="page-footer__contacts contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </section>
-        <section class="page-footer__copyright copyright">
-          <h2 class="visually-hidden">Копирайт HTML Academy</h2>
-          <a class="copyright__logo" href="https://htmlacademy.ru/">
-            <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33" alt="HTML Academy.">
-          </a>
-        </section>
+        <div class="page-footer__container">
+          <section class="page-footer__socials socials">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Vkontakte</span>
+                </a>
+              </li>
+              <li class=" socials__item">
+                <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Telegram</span>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                  <span class="visually-hidden">Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="page-footer__contacts contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+            <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </section>
+          <section class="page-footer__copyright copyright">
+            <h2 class="visually-hidden">Копирайт HTML Academy</h2>
+            <a class="copyright__logo" href="https://htmlacademy.ru/">
+              <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33"
+                alt="HTML Academy.">
+            </a>
+          </section>
+        </div>
       </footer>
     </div>
   </body>
