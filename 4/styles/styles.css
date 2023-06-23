@@ -24,7 +24,6 @@ html {
   box-sizing: border-box;
 }
 body{
-
   height: 100%;
   font-family: var(--main-font);
   font-size: 18px;
@@ -58,8 +57,6 @@ body{
   align-items: center;
   padding-right: 70px;
   padding-left: 70px;
-
-
 }
 .navigation__list{
   list-style: none;
@@ -69,8 +66,6 @@ body{
   padding: 0;
   margin-right: auto;
   margin-left: 30px;
-
-
 }
 .navigation__link{
   font-size: 20px;
@@ -86,7 +81,6 @@ body{
   display: flex;
   max-width: 310px;
   margin-left: auto;
-
 }
 .favourites-link{
   font-weight: 400;
@@ -100,6 +94,9 @@ body{
   margin-right: 20px;
 }
 .users-menu__link{
+  display: flex;
+  justify-content: center;
+  min-width: 160px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -108,13 +105,12 @@ body{
   color:#FFFFFF ;
   background: #756157;
   border-radius: 4px;
-  text-align: center;
-  padding: 8px 34px;
+  align-items: center;
+  padding: 8px 10px ;
 }
 /* main */
 .main-page{
   text-align: center;
-
 }
 .main-container {
   margin: 0 auto;
@@ -128,25 +124,27 @@ body{
   background-color:#4595ca;
   background-size: cover;
   padding: 51px 0 82px 0;
-
-  /* на всех фоновых картинках Николай обьяснял, что нужно ставить backgroun-color, чтоб при отключении ccs был видет текст. Но при этом фон выходит за приделы картинки, думаю дальше это можно исправить))
-  background-color: #82B3D3;
-  margin-bottom: 0; */
 }
 /* section-advantages */
 .advantages__list{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
-.advantages__item{
-width: 400px;
-min-height: 385px;
-padding: 112.5px 85px;
+.advantages__item-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 385px;
+  width: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 90px 85px;
+}
+.advantages__item--img{
+  width: 800px;
 }
 .advantages__title{
   font-weight: 700;
@@ -160,31 +158,24 @@ padding: 112.5px 85px;
   font-size: 22px;
   line-height: 26px;
 }
-.advantages__photo{
-  vertical-align: middle;
-
-}
-.advantages__item--city{
+.advantages__item-wide{
+  display: flex;
+  flex-wrap: wrap;
   color: #FFFFFF;
   background-color: #82B3D3;
-  padding: 102px 85px;
-
-
+  width: 100%;
 }
-.advantages__item--area{
+.advantages__item--wide-reverse{
+  flex-direction: row-reverse;
+}
+.advantages__item-narrow {
   background-color:rgba(131, 179, 211, 0.12);
 }
-.advantages__item--road{
+.advantages__item-narrow--color{
   background-color:rgba(131, 179, 211, 0.2);
 }
-.advantages__item--tourists{
-  background-color: rgba(131, 179, 211, 0.12);
-}
-.advantages__item--bridge{
-  color: #FFFFFF;
-  background-color: #82B3D3;
-  padding: 102px 85px;
-
+.advantages__photo{
+  vertical-align: middle;
 }
 .advantages__sub-title{
   font-weight: 700;
@@ -192,11 +183,15 @@ padding: 112.5px 85px;
   line-height: 28px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0 auto;
+  width: 175px;
 }
 .advantages__sub-title--color{
   color: #FFFFFF;
 }
-
+.advantages__description{
+  width: 230px;
+}
 .advantages__description--color{
   color: #FFFFFF;
 }
@@ -223,8 +218,6 @@ padding: 112.5px 85px;
   padding: 0;
   text-align: center;
   list-style: none;
-
-
 }
 .service__item{
   width: 400px;
@@ -240,7 +233,8 @@ padding: 112.5px 85px;
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
-
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .service__sub-title--house::before{
   content: "";
@@ -250,8 +244,6 @@ padding: 112.5px 85px;
   height: 72px;
   background-image: url("../images/service-house.svg");
   background-repeat: no-repeat;
-
-
 }
 .service__sub-title--food::before{
   content: "";
@@ -261,8 +253,6 @@ padding: 112.5px 85px;
   height: 72px;
   background-image: url("../images/service-food.svg");
   background-repeat: no-repeat;
-
-
 }
 .service__sub-title--souvenir::before{
   content: "";
@@ -272,7 +262,9 @@ padding: 112.5px 85px;
   height: 72px;
   background-image: url("../images/service-souvenir.svg");
   background-repeat: no-repeat;
-
+}
+.service__description{
+  width: 230px;
 }
 /* section-booking-hotel */
 .booking-hotel{
@@ -290,6 +282,8 @@ padding: 112.5px 85px;
   line-height: 26px;
 }
 .booking-hotel__link{
+  flex-wrap: wrap;
+  max-width: 592px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -299,7 +293,7 @@ padding: 112.5px 85px;
   color: #FFFFFF;
   background-color: #756157;
   border-radius: 4px;
-  padding: 5px 50px;
+  padding: 5px 20px;
 }
 /* section-subscribe */
 .subscribe{
@@ -309,18 +303,22 @@ padding: 112.5px 85px;
   background-color: #82B3D3;
 }
 .subscribe__title{
-font-weight: 700;
-font-size: 30px;
-line-height: 36px;
-text-transform: uppercase;
-color: #FFFFFF;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 .subscribe__text{
-font-size: 22px;
-line-height: 26px;
-color: #FFFFFF;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+.subscribe__form{
+  display: flex;
 }
 .subscribe__input{
+  display: inline-block;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -328,6 +326,12 @@ color: #FFFFFF;
   opacity: 60%;
   background-color:#F2F2F2;
   border: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  flex-wrap: wrap;
+  min-width: 452px;
+  margin: 0;
+  padding: 14px 20px;
 }
 .subscribe__button{
   display: inline-block;
@@ -342,7 +346,10 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #82B3D3;
   border: 0;
-
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 8px 50px;
+  margin: 0;
 }
  /* footer  */
 .page-footer__container{
@@ -354,7 +361,6 @@ color: #FFFFFF;
 }
 .socials{
   width: 142px;
-
 }
 .contacts{
   display: flex;
@@ -369,8 +375,6 @@ color: #FFFFFF;
   color: #000000;
   text-decoration: none;
   padding: 5px 194px 5px 195px;
-
-
 }
 .copyright{
   width: 115px;
@@ -392,7 +396,6 @@ color: #FFFFFF;
   margin: 0;
   padding: 0;
   margin-bottom: 8px;
-
 }
 .breadcrumbs{
   list-style: none;
@@ -405,64 +408,61 @@ color: #FFFFFF;
   text-decoration: none;
   color: #FFFFFF;
 }
-/* section-filters-hotels */
-
-.filters{
+/* section-filters */
+.forms{
   display: flex;
+
   width: 1060px;
 
 }
-.filters__group{
-  width: 150.43px;
+.forms__group{
+  min-width: 150px;
   padding: 0;
   margin: 0;
-  margin-right: 70px;
+
   border: 0;
 }
-.filters__group--cost{
-  width: 288px;
-  margin-left: 97px;
-  margin-right: 70px;
+.forms__group--cost{
+  min-width: 288px;
 }
-.filters__title{
+.forms__title{
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
-  padding: 0;
+  margin-bottom: 16px;
 }
-.filters__list{
+.forms__list{
   list-style: none;
   padding: 0;
-  margin: 32px 0 0 0;
 }
-.filters__item{
+.forms__item{
   line-height: 23px;
   color: #FFFFFF;
   margin: 16px 0 0 0;
 }
-.filters__label{
+.forms__label{
   font-size: 18px;
   line-height: 24px;
   color: #000000;
-
 }
-.filters__input{
+.forms__input{
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color:  #000000;
-
 }
-.filters__input--cost{
+.forms__input--cost{
   width: 143px;
   border: 0;
-
 }
-/*  Не могу понятьь как поставить кнопки друг над другом*/
-.filters__button{
-  display: block;
-  align-self: flex-end;
+.forms__button-container{
+  align-self: center;
+}
+.forms__button{
+  display:flex;
+  justify-content: center;
+  min-width: 191px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -470,13 +470,13 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 8px 8px;
+  padding: 8px 20px;
   border: 0;
   text-align: center;
   text-transform: uppercase;
-  max-width: 200px;
 }
-.filters__button--reset{
+.forms__button--reset{
+  text-align: center;
   background-color: transparent;
 }
 /* section-catalog-hotels */
@@ -485,31 +485,32 @@ color: #FFFFFF;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 50px 70px 60px 70px;
-
-
 }
 .catalog-hotels__title{
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
-margin: 0;
+  margin: 0;
+  max-width: 390px;
 }
+
 .sorting__select{
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin-right: 70px;
   color: #333333;
   padding-right: 131px;
   padding-left: 20px;
-
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   height: 49px;
 }
 .view{
-  margin: 0;
+  display: flex;
+  width: 160px;
 }
 .list-hotels{
   display: flex;
@@ -521,15 +522,11 @@ margin: 0;
   list-style: none;
 }
 .list-hotels__item{
-  box-sizing: 340px;
+  width: 340px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 20px;
-
-}
-.list-hotels__favourites--contrast{
-  box-sizing: 320px;
 }
 .list-hotels__img{
   vertical-align: middle;
@@ -543,6 +540,7 @@ margin: 0;
   text-decoration: none;
 }
 .list-hotels__detailed{
+  flex-wrap: wrap;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -552,10 +550,12 @@ margin: 0;
   color: #FFFFFF;
   background-color: #756157;
   border-radius: 4px;
-  padding: 8px 21px;
+  padding: 8px 15px;
   border: 0;
+  min-width: 130px;
 }
 .list-hotels__favourites{
+  flex-wrap: wrap;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -566,12 +566,12 @@ margin: 0;
   border-radius: 4px;
   padding: 8px 20px;
   border: 0;
+  min-width: 140px;
 }
 .list-hotels__rating{
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-
 }
 .list-hotels__favourites--contrast{
   background: #7DB54F;
@@ -580,10 +580,23 @@ margin: 0;
 /* ul-pagination  */
 .pagination{
   display: flex;
-  justify-content:s ;
+  width: 1060px;
+  margin: 40px 0 60px;
+  padding: 0;
   list-style: none;
 }
+.pagination__item{
+  margin-right: 8px;
+}
+.pagination__item:last-child{
+  margin-right: 0;
+}
 .pagination__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -592,6 +605,7 @@ margin: 0;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
+  padding: 0 12px;
 }
 .pagination__link--active{
   color: #000000;
