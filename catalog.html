@@ -56,59 +56,61 @@
               <a class="breadcrumbs__link" href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ol>
-          <section class="filters-hotels__form form">
+          <section class="filters-hotels__filters filters">
             <h2 class="visually-hidden">Поиск Гостиниц</h2>
-            <form class="form__filters filters" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="filters__group">
-                <legend class="filters__title">Инфраструктура:</legend>
-                <ul class="filters__list">
-                  <li class="filters__item">
-                    <label class="filters__label" for="pool"></label>
-                    <input class="filters__input" type="checkbox" name="pool" id="pool" checked>Бассейн
+            <form class="filters__forms forms" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="forms__group">
+                <legend class="forms__title">Инфраструктура:</legend>
+                <ul class="forms__list">
+                  <li class="forms__item">
+                    <label class="forms__label" for="pool"></label>
+                    <input class="forms__input" type="checkbox" name="pool" id="pool" checked>Бассейн
                   </li>
-                  <li class="filters__item">
-                    <label class="filters__label" for="parking"></label>
-                    <input class="filters__input" type="checkbox" name="parking" id="parking" checked>Парковка
+                  <li class="forms__item">
+                    <label class="forms__label" for="parking"></label>
+                    <input class="forms__input" type="checkbox" name="parking" id="parking" checked>Парковка
                   </li>
-                  <li class="filters__item">
-                    <label class="filters__label" for="wi-fi"></label>
-                    <input class="filters__input" type="checkbox" name="wi-fi" id="wi-fi">Wi-Fi
+                  <li class="forms__item">
+                    <label class="forms__label" for="wi-fi"></label>
+                    <input class="forms__input" type="checkbox" name="wi-fi" id="wi-fi">Wi-Fi
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filters__group">
-                <legend class="filters__title">Тип Жилья:</legend>
-                <ul class="filters__list">
-                  <li class="filters__item">
-                    <label class="filters__label" for="hotel"></label>
-                    <input class="filters__input" type="radio" value="hotel" name="filters" id="hotel" checked>Гостиница
+              <fieldset class="forms__group">
+                <legend class="forms__title">Тип Жилья:</legend>
+                <ul class="forms__list">
+                  <li class="forms__item">
+                    <label class="forms__label" for="hotel"></label>
+                    <input class="forms__input" type="radio" value="hotel" name="filters" id="hotel" checked>Гостиница
                   </li>
-                  <li class="filters__item">
-                    <label class="filters__label" for="motel"></label>
-                    <input class="filters__input" type="radio" value="motel" name="filters" id="motel">Мотель
+                  <li class="forms__item">
+                    <label class="forms__label" for="motel"></label>
+                    <input class="forms__input" type="radio" value="motel" name="filters" id="motel">Мотель
                   </li>
-                  <li class="filters__item">
-                    <label class="filters__label" for="apartments"></label>
-                    <input class="filters__input" type="radio" value="apartments" name="filters" id="apartments">
+                  <li class="forms__item">
+                    <label class="forms__label" for="apartments"></label>
+                    <input class="forms__input" type="radio" value="apartments" name="filters" id="apartments">
                     Апартаменты
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filters__group filters__group--cost">
-                <legend class="filters__title">Стоимость, ₽:</legend>
-                <ul class="filters__list">
-                  <li class="filters__item">
-                    <label class="filters__label" for="min-price">от</label>
-                    <input class="filters__input filters__input--cost" type="number" name="min-price" value="0"
+              <fieldset class="forms__group forms__group--cost">
+                <legend class="forms__title">Стоимость, ₽:</legend>
+                <ul class="forms__list">
+                  <li class="forms__item">
+                    <label class="forms__label" for="min-price">от</label>
+                    <input class="forms__input forms__input--cost" type="number" name="min-price" value="0"
                       id="min-price">
-                    <label class="filters__label" for="max-price">до</label>
-                    <input class="filters__input filters__input--cost" type="number" name="max-price" value="9000"
+                    <label class="forms__label" for="max-price">до</label>
+                    <input class="forms__input forms__input--cost" type="number" name="max-price" value="9000"
                       id="max-price">
                   </li>
                 </ul>
               </fieldset>
-              <button class="filters__button" type="submit">Применить</button>
-              <button class="filters__button filters__button--reset" type="reset">Сбросить</button>
+              <div class="forms__button-container">
+                <button class="forms__button" type="submit">Применить</button>
+                <button class="forms__button forms__button--reset" type="reset">Сбросить</button>
+              </div>
             </form>
           </section>
         </div>
@@ -154,9 +156,9 @@
               </p>
               <p class="list-hotels__rating">Рейтинг: 8,5</p>
             </li>
-            <li class="list-hotels__item list-hotels__item--contrast">
+            <li class="list-hotels__item">
               <a class="list-hotels__link" href="#">
-                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="280" height="200"
+                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="300" height="200"
                   alt="Горы Седоны на фоне темных облаков с радугой">
               </a>
               <a class="list-hotels__link" href="#">
@@ -208,22 +210,22 @@
             </li>
           </ul>
           <ul class="catalog-hotels__pagination pagination">
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link pagination__link--active" href="#" aria-current="page">1</a>
             </li>
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
             </li>
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link" href="#">3</a>
             </li>
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link" href="#">4</a>
             </li>
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link pagination__link--dot " href="#">...</a>
             </li>
-            <li class="pagination__list">
+            <li class="pagination__item">
               <a class="pagination__link" href="#">10</a>
             </li>
           </ul>
