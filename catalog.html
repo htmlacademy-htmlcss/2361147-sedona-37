@@ -28,12 +28,12 @@
         </nav>
         <ul class="page-header__users-menu users-menu ">
           <li class="users-menu__item">
-            <a class="users-menu__link-search" href="#">
+            <a class="users-menu__link-search link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__favourites-link favourites-link" href="#">
+            <a class="users-menu__link-favourites link-favourites" href="#">
               <span class="visually-hidden">Объектов добавлено в избранное</span>
               <span class="favourites-link__text">12</span>
             </a>
@@ -115,29 +115,31 @@
           </section>
         </div>
         <section class="main-inner__catalog-hotels catalog-hotels">
-          <h2 class="catalog-hotels__title">Найдено гостиниц: 38</h2>
-          <select class="sorting__select" aria-label="Сортировка" name="sorting">
-            <option class="sorting__option" value="cheap">Сначала дешевые</option>
-            <option class="sorting__option" value="expensivet">Сначала дорогие</option>
-            <option class="sorting__option" value="rating">По рейтингу</option>
-          </select>
-          <ul class="catalog-hotels__view view">
-            <li class="view__item">
-              <a class="view__grid" href="#">
-                <span class="visually-hidden">Показать сеткой</span>
-              </a>
-            </li>
-            <li class="view__item">
-              <a class="view__one" href="#">
-                <span class="visually-hidden">Показать по одному</span>
-              </a>
-            </li>
-            <li class="view__item">
-              <a class="view__list" href="#">
-                <span class="visually-hidden">Показать списком</span>
-              </a>
-            </li>
-          </ul>
+          <div class="catalog-hotels__container">
+            <h2 class="catalog-hotels__title">Найдено гостиниц: 38</h2>
+            <select class="sorting__select" aria-label="Сортировка" name="sorting">
+              <option class="sorting__option" value="cheap">Сначала дешевые</option>
+              <option class="sorting__option" value="expensivet">Сначала дорогие</option>
+              <option class="sorting__option" value="rating">По рейтингу</option>
+            </select>
+            <ul class="catalog-hotels__view view">
+              <li class="view__item">
+                <a class="view__grid" href="#">
+                  <span class="visually-hidden">Показать сеткой</span>
+                </a>
+              </li>
+              <li class="view__item">
+                <a class="view__one" href="#">
+                  <span class="visually-hidden">Показать по одному</span>
+                </a>
+              </li>
+              <li class="view__item">
+                <a class="view__list" href="#">
+                  <span class="visually-hidden">Показать списком</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <ul class="catalog-hotels__list-hotels list-hotels">
             <li class="list-hotels__item">
               <a class="list-hotels__link" href="#">

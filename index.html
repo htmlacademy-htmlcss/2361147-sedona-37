@@ -28,12 +28,12 @@
         </nav>
         <ul class="page-header__users-menu users-menu ">
           <li class="users-menu__item">
-            <a class="users-menu__link-search" href="#">
+            <a class="users-menu__link-search link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__favourites-link favourites-link" href="#">
+            <a class="users-menu__link-favourites link-favourites" href="#">
               <span class="visually-hidden">Объектов добавлено в избранное</span>
               <span class="favourites-link__text">12</span>
             </a>
@@ -49,15 +49,17 @@
           <img class="hero__img" src="images/hero.svg" width="458" height="352" alt="Седона круче, чем Гранд-Каньон.">
         </section>
         <section class="main-page__advantages advantages">
-          <h2 class="advantages__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="advantages__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <div class="advantages-wrapper">
+            <h2 class="advantages__title">Седона — небольшой городок в Аризоне,
+              заслуживающий большего!</h2>
+            <p class="advantages__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item-wide">
               <div class="advantages__item-container">
                 <h3 class="advantages__sub-title advantages__sub-title--color">Настоящий городок</h3>
                 <p class="advantages__description advantages__description--color">Седона — не аттракцион для туристов,
-                  там
-                  течёт своя жизнь</p>
+                  там течёт своя жизнь</p>
               </div>
               <div class="advantages__item--img">
                 <img class="advantages__photo" src="images/advantages-photo-1.jpg" width="800" height="385"
@@ -96,26 +98,35 @@
           </ul>
         </section>
         <section class="main-page__service service">
-          <h2 class="service__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="service__text">Опытный персонал и качественное обслуживание!</p>
+          <div class="service-wrapper">
+            <h2 class="service__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+            <p class="service__text">Опытный персонал и качественное обслуживание!</p>
+          </div>
           <ul class="service__list">
             <li class="service__item">
-              <h3 class="service__sub-title service__sub-title--house">Жильё</h3>
-              <p class="service__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <div class="service__item--container">
+                <h3 class="service__sub-title service__sub-title--house">Жильё</h3>
+                <p class="service__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </div>
             </li>
-            <li class="service__item service__item--food">
-              <h3 class="service__sub-title service__sub-title--food">Еда</h3>
-              <p class="service__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <li class="service__item ">
+              <div class="service__item--container-food">
+                <h3 class="service__sub-title service__sub-title--food">Еда</h3>
+                <p class="service__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              </div>
             </li>
             <li class="service__item">
-              <h3 class="service__sub-title service__sub-title--souvenir">Сувениры</h3>
-              <p class="service__description">Не только китайского, но и настоящего местного производства!</p>
+              <div class="service__item--container">
+                <h3 class="service__sub-title service__sub-title--souvenir">Сувениры</h3>
+                <p class="service__description">Не только китайского, но и настоящего местного производства!</p>
+              </div>
             </li>
           </ul>
         </section>
         <section class="main-page__booking-hotel booking-hotel">
           <h2 class="booking-hotel__title">Заинтересовались?</h2>
-          <p class="booking-hotel__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="booking-hotel__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
+            гостиниц в Седоне</p>
           <a class="booking-hotel__link" href="#">Поиск гостиницы в седоне</a>
         </section>
         <section class="main-page__subscribe subscribe">
