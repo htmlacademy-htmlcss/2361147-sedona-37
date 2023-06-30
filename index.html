@@ -52,31 +52,46 @@
           <h2 class="advantages__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="advantages__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--city">
-              <h3 class="advantages__sub-title advantages__sub-title--color">Настоящий городок</h3>
-              <p class="advantages__description advantages__description--color">Седона — не аттракцион для туристов, там
-                течёт своя жизнь</p>
-              <img class="advantages__photo" src="images/advantages-photo-1.jpg" width="800" height="385"
-                alt="Городок Седона.">
+            <li class="advantages__item advantages__item-wide">
+              <div class="advantages__item-container">
+                <h3 class="advantages__sub-title advantages__sub-title--color">Настоящий городок</h3>
+                <p class="advantages__description advantages__description--color">Седона — не аттракцион для туристов,
+                  там
+                  течёт своя жизнь</p>
+              </div>
+              <div class="advantages__item--img">
+                <img class="advantages__photo" src="images/advantages-photo-1.jpg" width="800" height="385"
+                  alt="Городок Седона.">
+              </div>
             </li>
-            <li class="advantages__item advantages__item--area">
-              <h3 class="advantages__sub-title">Небольшая площадь</h3>
-              <p class="advantages__description">Все достопримечательности находятся очень близко</p>
+            <li class="advantages__item advantages__item-narrow">
+              <div class="advantages__item-container">
+                <h3 class="advantages__sub-title">Небольшая площадь</h3>
+                <p class="advantages__description">Все достопримечательности находятся очень близко</p>
+              </div>
             </li>
-            <li class="advantages__item advantages__item--road">
-              <h3 class="advantages__sub-title">Красивая дорога</h3>
-              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="advantages__item advantages__item-narrow--color">
+              <div class="advantages__item-container">
+                <h3 class="advantages__sub-title">Красивая дорога</h3>
+                <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
             </li>
-            <li class="advantages__item advantages__item--tourists">
-              <h3 class="advantages__sub-title">Мало туристов</h3>
-              <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="advantages__item advantages__item-narrow">
+              <div class="advantages__item-container">
+                <h3 class="advantages__sub-title">Мало туристов</h3>
+                <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
+              </div>
             </li>
-            <li class="advantages__item advantages__item--bridge">
-              <h3 class="advantages__sub-title advantages__sub-title--color">Там есть мост дьявола</h3>
-              <p class="advantages__description advantages__description--color">Да, по нему можно пройти! Если вы
-                осмелитесь, разумеется</p>
-              <img class="advantages__photo" src="images/advantages-photo-2.jpg" width="800" height="385"
-                alt="Природный горный мост над коньоном.">
+            <li class="advantages__item advantages__item-wide advantages__item--wide-reverse">
+              <div class="advantages__item-container">
+                <h3 class="advantages__sub-title advantages__sub-title--color">Там есть мост дьявола</h3>
+                <p class="advantages__description advantages__description--color">Да, по нему можно пройти! Если вы
+                  осмелитесь, разумеется</p>
+              </div>
+              <div class="advantages__item--img">
+                <img class="advantages__photo" src="images/advantages-photo-2.jpg" width="800" height="385"
+                  alt="Природный горный мост над коньоном.">
+              </div>
             </li>
           </ul>
         </section>
@@ -88,7 +103,7 @@
               <h3 class="service__sub-title service__sub-title--house">Жильё</h3>
               <p class="service__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="service__item">
+            <li class="service__item service__item--food">
               <h3 class="service__sub-title service__sub-title--food">Еда</h3>
               <p class="service__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
@@ -115,36 +130,39 @@
       </main>
 
       <footer class="page-footer">
-        <section class="page-footer__socials socials">
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Vkontakte</span>
-              </a>
-            </li>
-            <li class=" socials__item">
-              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Telegram</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Youtube</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="page-footer__contacts contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </section>
-        <section class="page-footer__copyright copyright">
-          <h2 class="visually-hidden">Копирайт HTML Academy</h2>
-          <a class="copyright__logo-link" href="https://htmlacademy.ru/">
-            <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33" alt="HTML Academy.">
-          </a>
-        </section>
+        <div class="page-footer__container">
+          <section class="page-footer__socials socials">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Vkontakte</span>
+                </a>
+              </li>
+              <li class=" socials__item">
+                <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Telegram</span>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                  <span class="visually-hidden">Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="page-footer__contacts contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+            <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </section>
+          <section class="page-footer__copyright copyright">
+            <h2 class="visually-hidden">Копирайт HTML Academy</h2>
+            <a class="copyright__logo-link" href="https://htmlacademy.ru/">
+              <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33"
+                alt="HTML Academy.">
+            </a>
+          </section>
+        </div>
       </footer>
     </div>
   </body>
