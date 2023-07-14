@@ -177,7 +177,9 @@ body{
   vertical-align: auto;
   padding: 90px 85px;
 }
-.advantages__item--img{
+.advantages__photo{
+  object-fit: cover;
+  height: 100%;
   width: 800px;
 }
 .advantages__item-wide{
@@ -195,9 +197,6 @@ body{
 }
 .advantages__item-narrow--color{
   background-color:rgba(131, 179, 211, 0.2);
-}
-.advantages__photo{
-  vertical-align: middle;
 }
 .advantages__sub-title{
   font-weight: 700;
@@ -426,7 +425,14 @@ padding: 64px 0;
   width: 33%;
   height: 40px;
   padding: 0 10px;
-
+}
+/* переделать ссылку на большой размер */
+.socials__link{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 40px;
 }
 .contacts{
   flex-wrap: wrap;
@@ -445,6 +451,11 @@ padding: 64px 0;
 }
 .copyright{
   width: 115px;
+}
+.copyright__logo{
+display: flex;
+align-items: center;
+height: 33px;
 }
 /* Catalog section-filters-hotels */
 .filters-hotels{
@@ -603,25 +614,32 @@ margin-bottom: 16px;
   margin-right: 0;
 }
 .list-hotels{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap:20px;
   margin: 40px 0;
   padding: 0;
   width: 1060px;
   list-style: none;
 }
 .list-hotels__item{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
+  gap: 16px 20px;
   width: 340px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
-  margin-bottom: 20px;
 }
 .list-hotels__img{
-  vertical-align: middle;
+  display: block;
+  object-fit: contain;
+  width: 300px;
 }
 .list-hotels__link{
+  grid-column: 1/-1;
   display: block;
   font-weight: 700;
   font-size: 24px;
@@ -629,8 +647,20 @@ margin-bottom: 16px;
   color: #000000;
   text-decoration: none;
 }
+.list-hotels__title {
+  margin: 0;
+  word-break: break-word;
+}
+.list-hotels__text{
+  margin: 0;
+  word-break: break-word;
+}
+.list-hotels__cost{
+  margin: 0;
+  word-break: break-word;
+}
 .list-hotels__detailed{
-  flex-wrap: wrap;
+  word-break: break-word;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -640,12 +670,12 @@ margin-bottom: 16px;
   color: #FFFFFF;
   background-color: #756157;
   border-radius: 4px;
-  padding: 8px 15px;
+  padding: 8px 10px;
   border: 0;
   min-width: 130px;
 }
 .list-hotels__favourites{
-  flex-wrap: wrap;
+  word-break: break-word;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -654,7 +684,7 @@ margin-bottom: 16px;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
-  padding: 8px 20px;
+  padding: 8px 10px;
   border: 0;
   min-width: 140px;
 }
@@ -662,10 +692,12 @@ margin-bottom: 16px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0;
 }
 .list-hotels__favourites--contrast{
+  word-break: break-word;
   background: #7DB54F;
-  padding: 8px 13px;
+  padding: 8px 10px;
 }
 /* ul-pagination  */
 .pagination{
@@ -674,13 +706,15 @@ margin-bottom: 16px;
   margin: 40px 0 60px;
   padding: 0;
   list-style: none;
+  gap: 8px;
 }
+/* Вместо этих двух правил я поставила gap в строчке выше, это правильное решение?
 .pagination__item{
   margin-right: 8px;
 }
 .pagination__item:last-child{
   margin-right: 0;
-}
+} */
 .pagination__link{
   display: flex;
   align-items: center;
