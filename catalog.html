@@ -28,18 +28,18 @@
         </nav>
         <ul class="page-header__users-menu users-menu ">
           <li class="users-menu__item">
-            <a class="users-menu__link-search link-search" href="#">
+            <a class="users-menu__link users-menu__link--search" href="">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__link-favourites link-favourites" href="#">
+            <a class="users-menu__link users-menu__link--favourites" href="">
               <span class="visually-hidden">Объектов добавлено в избранное</span>
               <span class="favourites-link__text">12</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__link" href="#">Хочу сюда!</a>
+            <a class="users-menu__link-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </header>
@@ -47,7 +47,7 @@
         <div class="main-inner__filters-hotels filters-hotels">
           <h1 class="filters-hotels__title">Гостиницы Седоны</h1>
           <ol class="filters-hotels__breadcrumbs breadcrumbs">
-            <li class="breadcrumbs__item">
+            <li class="breadcrumbs__item ">
               <a class="breadcrumbs__link breadcrumbs__link--index" href="index.html">
                 <span class="visually-hidden">Главная</span>
               </a>
@@ -96,16 +96,26 @@
               </fieldset>
               <fieldset class="forms__group forms__group--cost">
                 <legend class="forms__title">Стоимость, ₽:</legend>
-                <ul class="forms__list">
-                  <li class="forms__item">
-                    <label class="forms__label" for="min-price">от</label>
-                    <input class="forms__input forms__input--cost" type="number" name="min-price" value="0"
-                      id="min-price">
-                    <label class="forms__label" for="max-price">до</label>
-                    <input class="forms__input forms__input--cost" type="number" name="max-price" value="9000"
-                      id="max-price">
-                  </li>
-                </ul>
+                <div class="filters-range range">
+                  <div class="range__wrapper-inputs">
+                    <label class="range__label">
+                      <input class="range__input" type="number" value="0" name="min-price">
+                    </label>
+                    <label class="range__label range__label--max">
+                      <input class="range__input range__input--max" type="number" value="9000" name="max-price">
+                    </label>
+                  </div>
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 0; width: 219px">
+                      <button class="range__toggle range__toggle--min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range__toggle range__toggle--max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
               <div class="forms__button-container">
                 <button class="forms__button" type="submit">Применить</button>
@@ -124,17 +134,17 @@
             </select>
             <ul class="catalog-hotels__view view">
               <li class="view__item">
-                <a class="view__grid" href="#">
+                <a class="view__link view__link--grid" href="#">
                   <span class="visually-hidden">Показать сеткой</span>
                 </a>
               </li>
               <li class="view__item">
-                <a class="view__one" href="#">
+                <a class="view__link view__link--one" href="#">
                   <span class="visually-hidden">Показать по одному</span>
                 </a>
               </li>
               <li class="view__item">
-                <a class="view__list" href="#">
+                <a class="view__link view__link--list" href="#">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
               </li>

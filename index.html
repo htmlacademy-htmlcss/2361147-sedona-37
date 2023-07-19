@@ -28,18 +28,18 @@
         </nav>
         <ul class="page-header__users-menu users-menu ">
           <li class="users-menu__item">
-            <a class="users-menu__link-search link-search" href="#">
+            <a class="users-menu__link users-menu__link--search" href="">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__link-favourites link-favourites" href="#">
+            <a class="users-menu__link users-menu__link--favourites" href="">
               <span class="visually-hidden">Объектов добавлено в избранное</span>
               <span class="favourites-link__text">12</span>
             </a>
           </li>
           <li class="users-menu__item">
-            <a class="users-menu__link" href="#">Хочу сюда!</a>
+            <a class="users-menu__link-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </header>
@@ -140,6 +140,7 @@
             <input class="subscribe__input" id="subscribe" name="subscribe" type="text" placeholder="Ваш e-mail"
               required>
             <button class="subscribe__button" type="submit">Подписаться</button>
+          </form>
         </section>
       </main>
 
@@ -174,10 +175,73 @@
             <a class="copyright__logo-link" href="https://htmlacademy.ru/">
               <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33"
                 alt="HTML Academy.">
+
             </a>
           </section>
         </div>
       </footer>
+    </div>
+    <!-- TODO Чтобы открыть модальное окно необходимо убрать класс modal-container--close -->
+    <div class="modal-container modal-container--close ">
+      <div class="modal modal__window">
+        <button class="modal__close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+            <p class="modal__group modal__group--check-in">
+              <label class="modal__label" for="modal-check-in">Дата заезда:
+                <input class="modal__input modal__input--data" type="text" id="modal-check-in"
+                  placeholder="27 апреля 2020" required></label>
+
+              <span class="modal__text-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="modal__group modal__group--check-out">
+              <label class="modal__label" for="modal-check-out">Дата выезда:
+                <input class="modal__input modal__input--data" type="text" id="modal-check-out"
+                  placeholder="1 сентября 2023" required></label>
+
+              <span class="modal__text">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <p class="modal__group modal__group--quantity">
+              <label class="modal__label" for="modal-adults">Взрослые: </label>
+              <span class="modal__wrapper">
+                <button class="modal__button-quantity modal__button-quantity--minus" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="modal__input modal__input--quantity" type="number" id="modal-adults" value="2">
+                <button class="modal__button-quantity modal__button-quantity--plus" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </span>
+            </p>
+            <p class="modal__group modal__group--quantity">
+              <span class="modal__label modal__label--child">
+                <label class="modal__label" for="modal-child">Дети: </label>
+                <span class="modal__tooltip tooltip">
+                  <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-label-child">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                  <span class="tooltip__text" role="tooltip" id="tooltip-label-child">Укажите количество детей,
+                    которые будут с вами, возраст которых от 6 до 18 лет. Дети до&nbsp;6 лет размещаются
+                    бесплатно.</span>
+                </span>
+              </span>
+              <span class="modal__wrapper">
+                <button class="modal__button-quantity modal__button-quantity--minus" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="modal__input modal__input--quantity" type="number" id="modal-child" value="2">
+                <button class="modal__button-quantity modal__button-quantity--plus" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </span>
+            </p>
+            <button class="modal__button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 
