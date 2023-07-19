@@ -820,12 +820,11 @@ color: rgba(255, 255, 255, 0.30)
   display: flex;
   margin-left: -12px;
   color: rgba(0, 0, 0, 0.3);
-  border-radius: 4px 0 0 4px;
+
 }
 
 .range__label--max {
   margin-left: 2px;
-  border-radius: 0 4px 4px 0;
 }
 
 .range__input {
@@ -843,6 +842,11 @@ color: rgba(255, 255, 255, 0.30)
   padding: 7px 5px;
   margin-bottom: 36px;
   appearance: textfield;
+  border-radius: 4px 0 0 4px;
+}
+
+.range__input--max{
+border-radius: 0 4px 4px 0;
 }
 
 .range__input::-webkit-outer-spin-button,
@@ -1311,6 +1315,20 @@ color: rgba(255, 255, 255, 0.30)
   border-radius: 50% 50%;
   border: none;
   cursor: pointer;
+}
+.modal__close-button:hover{
+background-color: #E6E6E6;
+}
+
+.modal__close-button:focus{
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  }
+
+.modal__close-button:active{
+  background-color: #E6E6E6;
+  opacity: 0.30000001192092896;
+  outline: none;
 }
 
 .modal__title {
