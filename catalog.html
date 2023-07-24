@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicons/favicon.png">
   </head>
 
   <body>
@@ -63,34 +65,40 @@
                 <legend class="forms__title">Инфраструктура:</legend>
                 <ul class="forms__list">
                   <li class="forms__item">
-                    <label class="forms__label" for="pool"></label>
-                    <input class="forms__input" type="checkbox" name="pool" id="pool" checked>Бассейн
+                    <label class="forms__label" for="pool">
+                      <input class="forms__input" type="checkbox" name="pool" id="pool" checked>Бассейн
+                    </label>
                   </li>
                   <li class="forms__item">
-                    <label class="forms__label" for="parking"></label>
-                    <input class="forms__input" type="checkbox" name="parking" id="parking" checked>Парковка
+                    <label class="forms__label" for="parking">
+                      <input class="forms__input" type="checkbox" name="parking" id="parking" checked>Парковка
+                    </label>
                   </li>
                   <li class="forms__item">
-                    <label class="forms__label" for="wi-fi"></label>
-                    <input class="forms__input" type="checkbox" name="wi-fi" id="wi-fi">Wi-Fi
+                    <label class="forms__label" for="wi-fi">
+                      <input class="forms__input" type="checkbox" name="wi-fi" id="wi-fi">Wi-Fi
+                    </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="forms__group">
+              <fieldset class="forms__group forms__group--realty">
                 <legend class="forms__title">Тип Жилья:</legend>
                 <ul class="forms__list">
                   <li class="forms__item">
-                    <label class="forms__label" for="hotel"></label>
-                    <input class="forms__input" type="radio" value="hotel" name="filters" id="hotel" checked>Гостиница
+                    <label class="forms__label" for="hotel">
+                      <input class="forms__input" type="radio" value="hotel" name="filters" id="hotel" checked>Гостиница
+                    </label>
                   </li>
                   <li class="forms__item">
-                    <label class="forms__label" for="motel"></label>
-                    <input class="forms__input" type="radio" value="motel" name="filters" id="motel">Мотель
+                    <label class="forms__label" for="motel">
+                      <input class="forms__input" type="radio" value="motel" name="filters" id="motel">Мотель
+                    </label>
                   </li>
                   <li class="forms__item">
-                    <label class="forms__label" for="apartments"></label>
-                    <input class="forms__input" type="radio" value="apartments" name="filters" id="apartments">
-                    Апартаменты
+                    <label class="forms__label" for="apartments">
+                      <input class="forms__input" type="radio" value="apartments" name="filters"
+                        id="apartments">Апартаменты
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -100,13 +108,15 @@
                   <div class="range__wrapper-inputs">
                     <label class="range__label">
                       <input class="range__input" type="number" value="0" name="min-price">
+                      <span class="range__label-text">от</span>
                     </label>
                     <label class="range__label range__label--max">
                       <input class="range__input range__input--max" type="number" value="9000" name="max-price">
+                      <span class="range__label-text">до</span>
                     </label>
                   </div>
                   <div class="range__scale">
-                    <div class="range__bar" style="left: 0; width: 219px">
+                    <div class="range__bar" style="left: 0; width: 215px">
                       <button class="range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
@@ -170,7 +180,7 @@
             </li>
             <li class="list-hotels__item">
               <a class="list-hotels__link" href="#">
-                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="300" height="200"
+                <img class="list-hotels__img" src="images/catalog/hotel-2.jpg" width="300" height="212"
                   alt="Горы Седоны на фоне темных облаков с радугой">
               </a>
               <a class="list-hotels__link" href="#">
@@ -244,11 +254,11 @@
         </section>
         <section class="main-inner__subscribe subscribe subscribe--catalog">
           <h2 class="subscribe__title subscribe__title--catalog">Подпишитесь на рассылку</h2>
-          <p class="subscribe__text subscribe__text--catalog">Только полезная информация и никакого спама, честное
+          <p class="subscribe__text subscribe__text--catalog">Только полезная информация и никакого спама, <br>честное
             бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class=" visually-hidden subscribe__label" for="subscribe">Ваш e-mail:</label>
-            <input class="subscribe__input" id="subscribe" name="subscribe" type="text" placeholder="Ваш e-mail"
+            <input class="subscribe__input" id="subscribe" name="subscribe" type="email" placeholder="Ваш e-mail"
               required>
             <button class="subscribe__button" type="submit">Подписаться</button>
           </form>
@@ -283,10 +293,7 @@
           </section>
           <section class="page-footer__copyright copyright">
             <h2 class="visually-hidden">Копирайт HTML Academy</h2>
-            <a class="copyright__logo" href="https://htmlacademy.ru/">
-              <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33"
-                alt="HTML Academy.">
-            </a>
+            <a class="copyright__logo" href="https://htmlacademy.ru/"></a>
           </section>
         </div>
       </footer>
