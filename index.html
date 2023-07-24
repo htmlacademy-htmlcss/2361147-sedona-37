@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <title>Седона-город в Аризоне</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicons/favicon.png">
   </head>
 
   <body>
     <div class="container">
       <header class="page-header">
-        <a class="page-header__logo logo" href="index.html" aria-current="page">
-          <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
+        <a class="page-header__logo logo" href="index.html">
+          <img class="logo__image" src="images/logo.svg" width="140" height="70" alt="Логотип Седоны.">
         </a>
         <nav class="page-header__navigation navigation">
           <ul class="navigation__list">
@@ -86,13 +88,13 @@
             </li>
             <li class="advantages__item advantages__item-wide advantages__item--wide-reverse">
               <div class="advantages__item-container">
-                <h3 class="advantages__sub-title advantages__sub-title--color">Там есть мост дьявола</h3>
+                <h3 class="advantages__sub-title advantages__sub-title--color">Там есть<br> мост дьявола</h3>
                 <p class="advantages__description advantages__description--color">Да, по нему можно пройти! Если вы
                   осмелитесь, разумеется</p>
               </div>
               <div class="advantages__item--img">
                 <img class="advantages__photo" src="images/advantages-photo-2.jpg" width="800" height="385"
-                  alt="Природный горный мост над коньоном.">
+                  alt="Природный горный мост над каньоном.">
               </div>
             </li>
           </ul>
@@ -134,10 +136,10 @@
         </section>
         <section class="main-page__subscribe subscribe">
           <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
-          <p class="subscribe__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscribe__text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class=" visually-hidden subscribe__label" for="subscribe">Ваш e-mail:</label>
-            <input class="subscribe__input" id="subscribe" name="subscribe" type="text" placeholder="Ваш e-mail"
+            <input class="subscribe__input" id="subscribe" name="subscribe" type="email" placeholder="Ваш e-mail"
               required>
             <button class="subscribe__button" type="submit">Подписаться</button>
           </form>
@@ -171,10 +173,7 @@
           </section>
           <section class="page-footer__copyright copyright">
             <h2 class="visually-hidden">Копирайт HTML Academy</h2>
-            <a class="copyright__logo-link" href="https://htmlacademy.ru/">
-              <img class="copyright__logo" src="images/logo-html-academy.svg" width="115" height="33"
-                alt="HTML Academy.">
-            </a>
+            <a class="copyright__logo" href="https://htmlacademy.ru/"></a>
           </section>
         </div>
       </footer>
@@ -189,14 +188,16 @@
           <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <p class="modal__group modal__group--check-in">
-              <label class="modal__label" for="modal-check-in">Дата заезда:
-                <input class="modal__input modal__input--data" type="text" id="modal-check-in"
+              <label class="modal__label" for="modal-check-in">
+                <span class="modal__label-text">Дата Заезда:</span>
+                <input class="modal__input modal__input--data" type="text" id="modal-check-in" name="check-in"
                   placeholder="27 апреля 2020" required></label>
               <span class="modal__text-error">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="modal__group modal__group--check-out">
-              <label class="modal__label" for="modal-check-out">Дата выезда:
-                <input class="modal__input modal__input--data" type="text" id="modal-check-out"
+              <label class="modal__label" for="modal-check-out">
+                <span class="modal__label-text">Дата Выезда:</span>
+                <input class="modal__input modal__input--data" type="text" id="modal-check-out" name="check-out"
                   placeholder="1 сентября 2023" required></label>
               <span class="modal__text">На эти даты есть свободные номера. Пока есть.</span>
             </p>
@@ -206,7 +207,8 @@
                 <button class="modal__button-quantity modal__button-quantity--minus" type="button">
                   <span class="visually-hidden">Уменьшить</span>
                 </button>
-                <input class="modal__input modal__input--quantity" type="number" id="modal-adults" value="2">
+                <input class="modal__input modal__input--quantity" name="modal-adults" type="number" id="modal-adults"
+                  value="2">
                 <button class="modal__button-quantity modal__button-quantity--plus" type="button">
                   <span class="visually-hidden">Увеличить</span>
                 </button>
@@ -228,7 +230,8 @@
                 <button class="modal__button-quantity modal__button-quantity--minus" type="button">
                   <span class="visually-hidden">Уменьшить</span>
                 </button>
-                <input class="modal__input modal__input--quantity" type="number" id="modal-child" value="2">
+                <input class="modal__input modal__input--quantity" type="number" name="modal-child" id="modal-child"
+                  value="2">
                 <button class="modal__button-quantity modal__button-quantity--plus" type="button">
                   <span class="visually-hidden">Увеличить</span>
                 </button>
